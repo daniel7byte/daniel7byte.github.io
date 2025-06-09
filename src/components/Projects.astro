@@ -1,38 +1,71 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import NextJS from './icons/NextJS.astro';
+import Tailwind from './icons/Tailwind.astro';
+import AWS from './icons/AWS.astro';
+import NodeJS from './icons/NodeJS.astro';
+import Microservices from './icons/Microservices.astro';
+import Serverless from './icons/Serverless.astro';
 
 const TAGS = {
   NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
+    name: 'Next.js',
+    class: 'bg-black text-white',
     icon: NextJS,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
     icon: Tailwind,
   },
-}
+  AWS: {
+    name: 'AWS',
+    class: 'bg-orange-600 text-white',
+    icon: AWS,
+  },
+  NODEJS: {
+    name: 'Node.js',
+    class: 'bg-green-600 text-white',
+    icon: NodeJS,
+  },
+  MICROSERVICES: {
+    name: 'Microservices',
+    class: 'bg-blue-600 text-white',
+    icon: Microservices,
+  },
+  SERVERLESS: {
+    name: 'Serverless',
+    class: 'bg-purple-600 text-white',
+    icon: Serverless,
+  },
+};
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: 'Adomi Delivery - Plataforma de Delivery',
     description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      'Arquitectura en la nube basada en microservicios para plataforma de delivery. Implementación de sistemas de monitoreo, alertas en tiempo real con Slack bots, llamadas automatizadas con Twilio, y seguimiento en tiempo real de conductores. Optimización que logró reducir costos en la nube y aumentar velocidad de respuesta.',
+    tags: [TAGS.NODEJS, TAGS.MICROSERVICES, TAGS.AWS],
   },
-]
+  {
+    title: 'Crops Rent - IoT para Agricultura',
+    description:
+      'Plataforma tecnológica para el sector agrícola integrando dispositivos IoT. Desarrollo de sistema de monitoreo y automatización para cultivos usando Arduino, sensores IoT y comunicación MQTT para optimizar el rendimiento agrícola.',
+    tags: [TAGS.NODEJS, TAGS.AWS],
+  },
+  {
+    title: 'Procesamiento de Imágenes Satelitales',
+    description:
+      'Sistema de procesamiento de imágenes satelitales usando Python y arquitectura serverless en AWS. Implementación de pipelines de procesamiento escalables para análisis geoespacial y extracción de información de imágenes de satélite.',
+    tags: [TAGS.AWS, TAGS.SERVERLESS],
+  },
+];
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags }) => (
+  PROJECTS.map(({ title, description, tags }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
+      <ul class="flex gap-x-2 flex-row mb-4">
         {tags.map((tag) => (
           <li>
             <span
@@ -44,12 +77,6 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img
-        loading="lazy"
-        class="rounded shadow-2xl shadow-white/10 aspect-video"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
     </article>
   ))
 }

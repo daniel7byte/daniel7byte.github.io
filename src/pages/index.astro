@@ -1,22 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Badge from "../components/Badge.astro"
-import SectionContainer from "../components/SectionContainer.astro"
-import LinkedInIcon from "../components/icons/LinkedIn.astro"
-import EducationIcon from "../components/icons/Education.astro"
-import SocialPill from "../components/SocialPill.astro"
-import GitHubIcon from "../components/icons/GitHub.astro"
-import MailIcon from "../components/icons/Mail.astro"
-import Experience from "../components/Experience.astro"
-import Education from "../components/Education.astro"
-import Briefcase from "../components/icons/Briefcase.astro"
-import CodeIcon from "../components/icons/Code.astro"
-import Projects from "../components/Projects.astro"
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import EducationIcon from '../components/icons/Education.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout
-  title="Portafolio Jose Daniel - Developer con 7 años de experiencia"
-  description="Contrata a Jose Daniel para crear tu soluciones en la nube. Especializado en crear arquitectura de soluciones en la nube."
+  title="José Daniel Posso Garcia - Developer | Cloud Architect | Tech Entrepreneur"
+  description="Profesional con más de 6 años de experiencia en proyectos de TI. Especializado en liderazgo técnico, arquitectura de soluciones en la nube, y desarrollo full-stack."
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-32">
@@ -38,24 +38,42 @@ import Projects from "../components/Projects.astro"
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
-        + 7 años de experiencia en proyectos de TI. Tiene más de 2 años de experiencia construyendo y <span class="text-yellow-200">liderando equipos técnicos</span>, con muy buena comunicación y aplicando metodologías
-        Experiencia en Scrum, <span class="text-red-200">Arquitectura de Soluciones en la nube, CI/CD, automatización, bases de datos (SQL y NoSQL)</span>, adicionalmente en diferentes lenguajes de programación.
-        Mi lema de vida es <span class="text-sky-200">"Si no lo sé, lo aprenderé".</span>
-        <br>
+        <span class="text-yellow-200"
+          >💻 Developer | ☁️ Cloud Architect | 🚀 Tech Entrepreneur</span
+        >
+        <br /><br />
+        Profesional con más de <span class="text-yellow-200"
+          >6 años de experiencia</span
+        > en proyectos de TI. Más de 2 años de experiencia construyendo y <span
+          class="text-yellow-200">liderando equipos técnicos</span
+        >, con muy buena comunicación y aplicando metodologías ágiles.
+        <br /><br />
+        Experiencia en <span class="text-red-200"
+          >Scrum, arquitectura de software en la nube, CI/CD, automatización,
+          bases de datos (SQL y NoSQL)</span
+        >, adicionalmente diferentes lenguajes de programación.
+        <br /><br />
+        Mi lema de vida es <span class="text-sky-200"
+          >"Si no lo sé, lo aprenderé".</span
+        >
+        <br /><br />
+        <span class="text-sky-200">Competente en:</span> Leadership, Project Management,
+        Scrum, Kanban, Node.JS, Express.JS, Sockets, SQL y NoSQL, Redis, Microservices,
+        Google Cloud Platform, Cron Jobs, Automation, Docker y CI/CD
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://linkedin.com/in/jose-daniel-posso-garcia">
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+          LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/daniel7byte">
           <GitHubIcon class="size-4 md:size-6" />
-           GitHub
+          GitHub
         </SocialPill>
         <SocialPill href="mailto:daniel7byte@gmail.com">
           <MailIcon class="size-4 md:size-6" />
-           daniel7byte@gmail.com
+          daniel7byte@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
@@ -63,7 +81,7 @@ import Projects from "../components/Projects.astro"
     <SectionContainer id="experiencia">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
-         Experiencia laboral
+        Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
@@ -71,7 +89,7 @@ import Projects from "../components/Projects.astro"
     <SectionContainer id="experiencia">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <EducationIcon class="size-7" />
-         Educación
+        Educación
       </h2>
       <Education />
     </SectionContainer>
@@ -79,7 +97,7 @@ import Projects from "../components/Projects.astro"
     <SectionContainer id="proyectos">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
-         Proyectos destacados
+        Proyectos destacados
       </h2>
       <Projects />
     </SectionContainer>
